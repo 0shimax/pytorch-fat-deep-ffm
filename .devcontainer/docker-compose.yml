@@ -1,0 +1,13 @@
+version: "3"
+services:
+  fat-d-ffm:
+    image: python39-pytorch
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    command: sleep infinity
+    ports:
+      - 8888:8888
+    volumes:
+      - ~/projects:/project
+      - ~/data:/data
